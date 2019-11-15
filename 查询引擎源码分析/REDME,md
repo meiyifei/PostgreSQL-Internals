@@ -1,3 +1,3 @@
-###PostgreSQL查询引擎源码分析
-###SQL查询处理流程 
-![](http://www.interdb.jp/pg/img/fig-3-01.png)
+### PostgreSQL查询引擎源码分析
+### SQL查询处理流程 
+ ![查询处理流程.PNG](http://www.interdb.jp/pg/img/fig-3-01.png) 
