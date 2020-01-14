@@ -1,4 +1,4 @@
-# 								          CreateTableAs语句源码分析
+#  		CreateTableAs语句源码分析
 
 ​	由于create table as语句属于工具类语句，所以定位到src/backend/tcop/utility.c文件的入口函数standard_ProcessUtility().
 
