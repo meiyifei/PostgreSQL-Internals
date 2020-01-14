@@ -16,7 +16,7 @@ case T_CreateTableAsStmt:
 **standard_ProcessUtility-->ProcessUtilitySlow-->ExecCreateTableAs**
 
 ```c
-*
+/*
  * ExecCreateTableAs -- execute a CREATE TABLE AS command
  */
 ObjectAddress
