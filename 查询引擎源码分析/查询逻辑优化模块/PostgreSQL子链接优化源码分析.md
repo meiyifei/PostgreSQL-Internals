@@ -9,7 +9,7 @@
  * exec_simple_query
  *
  * Execute a "simple Query" protocol message.
- */
+ /*
 static void
 exec_simple_query(const char *query_string)
 {
