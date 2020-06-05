@@ -1490,9 +1490,9 @@ test=# explain analyze select info from test where exists(select 1 from st where
 				/* Return NULL representing constant TRUE */
 				return NULL;
 
-可以看到joinexpr节点的larg指定为jointree的fromlist(已经经过pull_up_sublink优化,
-如果from子查询中包含子链接会在后面继续优化的)，并且调用函数pull_up_sublinks_jointree_recurse
-继续对rarg和quals进行递归优化的
+*/
+/*
+   可以看到joinexpr节点的larg指定为jointree的fromlist(已经经过pull_up_sublink优化,如果from子查询中包含子链接会在后面继续优化的)，并且调用函数      pull_up_sublinks_jointree_recurse继续对rarg和quals进行递归优化的
 */
  
 void
