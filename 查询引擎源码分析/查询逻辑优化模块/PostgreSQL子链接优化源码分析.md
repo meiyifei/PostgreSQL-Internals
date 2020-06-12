@@ -1076,7 +1076,7 @@ convert_ANY_sublink_to_join(PlannerInfo *root, SubLink *sublink,
 
 ### convert_ANY_sublink_to_join函数首先说明了能够将子链接转换为join必须满足的条件
 
-1. 子链接中的子查询不包含父查询中的任何VAR变量。
+1. 子链接中的子查询不包含父查询中的任何VAR变量。(优化无关子查询)
 2. 比较表达式必须包含父查询中一些Var变量。
 3. 比较表达式不包含任何的易失函数。
 
@@ -1242,9 +1242,8 @@ convert_EXISTS_sublink_to_join(PlannerInfo *root, SubLink *sublink,
 ### convert_EXISTS_sublink_to_join函数优化的条件
 
 1. 子链接中的子查询不包含CTE
-2. 子链接中的子查询不包含父查询中的任何VAR变量。
-3. WHERE子句中必须包含父查询中一些Var变量。
-4. WHERE子句中不包含任何的易失函数。
+2. WHERE子句中必须包含父查询中一些Var变量。(优化相关子查询)
+3. WHERE子句中不包含任何的易失函数。
 
 ### convert_EXISTS_sublink_to_join函数流程
 
